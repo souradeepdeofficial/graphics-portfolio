@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Pricing — Souradeep De | Canva Designer</title>
+  <meta name="description" content="Explore my design services and pricing packages. Brand design, social media graphics, YouTube content, and ongoing support for your creative needs.">
+  <meta name="author" content="Souradeep De">
+  <meta property="og:title" content="Services & Pricing — Souradeep De">
+  <meta property="og:description" content="Professional design services starting from $99. Packages for startups, creators, and established brands.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --clr-primary: #2AABB8;
+      --clr-primary-dark: #228f9b;
+      --clr-primary-light: #E8F7F9;
+      --clr-bg: #F3F4F6;
+      --clr-surface: #FFFFFF;
+      --clr-text: #1A1A1A;
+      --clr-text-secondary: #6B7280;
+      --clr-black: #111111;
+      --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+      --shadow-hover: 0 12px 40px rgba(0,0,0,0.14);
+      --max-width: 1200px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background-color: var(--clr-bg);
+      color: var(--clr-text);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition);
+    }
+
+    button {
+      cursor: pointer;
+      font-family: var(--font-primary);
+      border: none;
+      outline: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn--primary {
+      background: var(--clr-text);
+      color: #fff;
+    }
+
+    .btn--primary:hover {
+      background: var(--clr-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn--teal {
+      background: var(--clr-primary);
+      color: #fff;
+    }
+
+    .btn--teal:hover {
+      background: var(--clr-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(42, 171, 184, 0.3);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--clr-surface);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .navbar__logo {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      color: var(--clr-text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .navbar__logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--clr-text);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .navbar__links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .navbar__link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--clr-text-secondary);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .navbar__link:hover {
+      color: var(--clr-text);
+    }
+
+    .navbar__link--active {
+      color: var(--clr-text);
+      font-weight: 600;
+    }
+
+    .navbar__link--active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 2px;
+      background: var(--clr-primary);
+      border-radius: var(--radius-pill);
+    }
+
+    .navbar__connect {
+      padding: 10px 24px;
+    }
+
+    .navbar__toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: transparent;
+      flex-shrink: 0;
+    }
+
+    .navbar__toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--clr-text);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    .navbar__toggle.is-active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar__toggle.is-active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .navbar__toggle.is-active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ===== STICKY SIDEBAR CTA ===== */
+    .sidebar-cta {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 14px;
+    }
+
+    .sidebar-cta__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex: 0 0 auto;
+      height: 52px;
+      width: 52px;
+      padding: 0;
+      border-radius: var(--radius-pill);
+      color: #fff;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      will-change: width;
+      transition: width var(--transition), box-shadow var(--transition), transform var(--transition);
+    }
+
+    .sidebar-cta__btn svg {
+      flex-shrink: 0;
+    }
+
+    .sidebar-cta__label {
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      max-width: 0;
+      transition: opacity var(--transition), max-width var(--transition);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .sidebar-cta__btn:hover {
+        width: 156px;
+        justify-content: flex-start;
+        padding-left: 16px;
+        transform: translateX(-4px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .sidebar-cta__btn:hover .sidebar-cta__label {
+        opacity: 1;
+        max-width: 100px;
+        margin-left: 10px;
+      }
+    }
+
+    .sidebar-cta__btn--whatsapp {
+      background: #25D366;
+    }
+
+    .sidebar-cta__btn--email {
+      background: var(--clr-text);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      padding: 60px 0 40px;
+      background: var(--clr-bg);
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero__content {
+      max-width: 600px;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--clr-primary-light);
+      color: var(--clr-primary);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 24px;
+      white-space: nowrap;
+    }
+
+    .hero__badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--clr-primary);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .hero__title {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--clr-text);
+      margin-bottom: 20px;
+    }
+
+    .hero__subtitle {
+      font-size: 17px;
+      color: var(--clr-text-secondary);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .hero__benefits {
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+      background: var(--clr-surface);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero__benefits-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--clr-text);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .hero__benefits-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 24px;
+    }
+
+    .hero__benefits-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--clr-text);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .hero__benefits-checkmark {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--clr-primary-light);
+      color: var(--clr-primary);
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
+    /* ===== SERVICES & PRICING SECTION ===== */
+    .services {
+      background: var(--clr-bg);
+      padding: 0 0 40px 0;
+    }
+
+    /* Service Cards Grid */
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .service-card {
+      background: var(--clr-surface);
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-card__icon {
+      width: 56px;
+      height: 56px;
+      background: var(--clr-primary-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-primary);
+      margin-bottom: 20px;
+    }
+
+    .service-card__icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--clr-text);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--clr-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Section Title */
+    .section__title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--clr-text);
+      margin-top: 40px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .section__title:first-of-type {
+      margin-top: 0;
+    }
+
+    /* Packages Grid */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+
+    .pricing-card {
+      background: var(--clr-surface);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card--featured {
+      border: 2px solid var(--clr-primary);
+      transform: scale(1.02);
+      box-shadow: 0 16px 48px rgba(42, 171, 184, 0.12);
+    }
+
+    .pricing-card--featured:hover {
+      transform: scale(1.03);
+    }
+
+    .pricing-card:hover:not(.pricing-card--featured) {
+      border-color: rgba(0, 0, 0, 0.12);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pricing-card__badge {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: var(--clr-primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+    }
+
+    .pricing-card__header {
+      margin-bottom: 32px;
+    }
+
+    .pricing-card__header h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--clr-text);
+      margin-bottom: 12px;
+    }
+
+    .pricing-card__price {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: 8px;
+    }
+
+    .pricing-card__description {
+      font-size: 14px;
+      color: var(--clr-text-secondary);
+      line-height: 1.5;
+    }
+
+    .pricing-card__features {
+      flex-grow: 1;
+      margin-bottom: 24px;
+    }
+
+    .pricing-card__features li {
+      font-size: 14px;
+      color: var(--clr-text);
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .pricing-card__features li:last-child {
+      border-bottom: none;
+    }
+
+    .checkmark {
+      color: var(--clr-primary);
+      font-weight: 700;
+    }
+
+    /* Ongoing Support */
+    .ongoing-section {
+      margin-top: 64px;
+      margin-bottom: 64px;
+      background: var(--clr-primary-light);
+      padding: 56px 48px;
+      border-radius: var(--radius-lg);
+    }
+
+    .ongoing-subtitle {
+      font-size: 16px;
+      color: var(--clr-text-secondary);
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    .ongoing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-bottom: 20px;
+    }
+
+    .ongoing-card {
+      background: var(--clr-surface);
+      padding: 32px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all var(--transition);
+    }
+
+    .ongoing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ongoing-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--clr-text);
+      margin-bottom: 12px;
+    }
+
+    .ongoing-card__price {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .ongoing-card__price span {
+      font-size: 14px;
+      color: var(--clr-text-secondary);
+      font-weight: 500;
+    }
+
+    .ongoing-card__features {
+      font-size: 14px;
+      color: var(--clr-text);
+      line-height: 1.8;
+    }
+
+    .ongoing-card__features li {
+      list-style: none;
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    .ongoing-card__features li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--clr-primary);
+      font-weight: 700;
+    }
+
+    .footnote {
+      font-size: 12px;
+      color: var(--clr-text-secondary);
+      text-align: center;
+    }
+
+    /* Add-ons */
+    .addons-section {
+      margin-bottom: 64px;
+    }
+
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .addon-item {
+      background: var(--clr-surface);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all var(--transition);
+    }
+
+    .addon-item:hover {
+      border-color: var(--clr-primary);
+      background: rgba(42, 171, 184, 0.02);
+    }
+
+    .addon-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--clr-text);
+    }
+
+    .addon-price {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--clr-primary);
+      white-space: nowrap;
+      margin-left: 16px;
+    }
+
+    /* Premium Add-ons Section */
+    .premium-addons-section {
+      margin-bottom: 64px;
+      text-align: center;
+    }
+
+    .premium-addons-section .section__title {
+      margin-bottom: 48px;
+    }
+
+    .premium-addons-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--clr-primary-light);
+      padding: 48px 40px;
+      border-radius: var(--radius-lg);
+    }
+
+    .premium-addons-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .premium-addon-item {
+      background: var(--clr-surface);
+      padding: 16px 24px;
+      margin-bottom: 12px;
+      border-radius: var(--radius-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all var(--transition);
+      border: 1px solid rgba(42, 171, 184, 0.2);
+    }
+
+    .premium-addon-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .premium-addon-item:hover {
+      background: #fff;
+      border-color: var(--clr-primary);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(8px);
+    }
+
+    .premium-addon-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--clr-text);
+      text-align: left;
+    }
+
+    .premium-addon-price {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--clr-primary);
+      white-space: nowrap;
+      margin-left: 24px;
+      flex-shrink: 0;
+    }
+
+    /* Process */
+    .process-section {
+      margin-bottom: 64px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+    }
+
+    .process-step {
+      text-align: center;
+    }
+
+    .process-step__number {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .process-step h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--clr-text);
+      margin-bottom: 12px;
+    }
+
+    .process-step p {
+      font-size: 14px;
+      color: var(--clr-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--clr-text);
+      color: #fff;
+      padding: 60px;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Who I Work With Section */
+    .who-i-work-section {
+      margin-bottom: 64px;
+      text-align: center;
+    }
+
+    .who-i-work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .work-with-card {
+      background: var(--clr-surface);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all var(--transition);
+      cursor: default;
+    }
+
+    .work-with-card:hover {
+      border-color: var(--clr-primary);
+      box-shadow: 0 8px 24px rgba(42, 171, 184, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .work-with-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--clr-text);
+      margin: 0;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin-bottom: 64px;
+    }
+
+    .faq-container {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--clr-surface);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: visible;
+      transition: all var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      background: transparent;
+      padding: 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      font-weight: 600;
+      color: var(--clr-text);
+      font-size: 15px;
+      transition: all var(--transition);
+      user-select: none;
+      min-height: 64px;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      color: var(--clr-primary);
+    }
+
+    .faq-question-text {
+      flex: 1;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .faq-toggle {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-primary);
+      font-size: 16px;
+      transition: transform var(--transition);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .faq-answer-text {
+      padding: 20px 24px 24px 24px;
+      font-size: 14px;
+      color: var(--clr-text-secondary);
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--clr-surface);
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer__name {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: var(--clr-text);
+    }
+
+    .footer__copy {
+      font-size: 13px;
+      color: var(--clr-text-secondary);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero__subtitle {
+        padding-right: 76px;
+      }
+
+      .hero__benefits {
+        padding: 40px 32px;
+      }
+
+      .hero__benefits-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__title {
+        font-size: 28px;
+      }
+
+      .section__title {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
+
+      .services__grid,
+      .packages-grid,
+      .ongoing-grid,
+      .addons-grid,
+      .process-grid {
+        gap: 16px;
+      }
+
+      .pricing-card {
+        padding: 28px;
+      }
+
+      .pricing-card--featured {
+        transform: scale(1);
+      }
+
+      .ongoing-section {
+        padding: 40px 24px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-buttons .btn {
+        width: 100%;
+      }
+
+      .cta-section {
+        padding: 40px 24px;
+      }
+
+      .who-i-work-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .work-with-card {
+        padding: 24px 16px;
+      }
+
+      .work-with-card h3 {
+        font-size: 14px;
+      }
+
+      .faq-container {
+        max-width: 100%;
+      }
+
+      .faq-item {
+        margin-bottom: 10px;
+      }
+
+      .faq-question {
+        padding: 20px;
+        min-height: 56px;
+        gap: 16px;
+      }
+
+      .faq-question-text {
+        font-size: 14px;
+      }
+
+      .faq-toggle {
+        width: 18px;
+        height: 18px;
+        font-size: 14px;
+      }
+
+      .faq-answer-text {
+        padding: 20px;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .process-step__number {
+        font-size: 36px;
+      }
+
+      .navbar__toggle {
+        display: flex;
+      }
+
+      .navbar__links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--clr-surface);
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        box-shadow: var(--shadow-md);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition);
+      }
+
+      .navbar__links.is-open {
+        max-height: 240px;
+      }
+
+      .navbar__link {
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba(0,0,0,0.04);
+      }
+
+      .navbar__link--active::after {
+        display: none;
+      }
+
+      .navbar__connect {
+        margin: 16px 24px;
+        padding: 12px 24px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .sidebar-cta {
+        right: 16px;
+        gap: 12px;
+      }
+
+      .sidebar-cta__btn {
+        height: 48px;
+        width: 48px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 48px 0;
+      }
+
+      .hero__title {
+        font-size: 24px;
+      }
+
+      .services__grid,
+      .packages-grid,
+      .ongoing-grid,
+      .addons-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .service-card,
+      .pricing-card,
+      .ongoing-card,
+      .addon-item {
+        padding: 20px;
+      }
+
+      .addon-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .addon-price {
+        margin-left: 0;
+      }
+
+      .cta-section {
+        padding: 32px 20px;
+      }
+
+      .cta-section h2 {
+        font-size: 24px;
+      }
+
+      .section__title {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="navbar__logo" aria-label="Souradeep De">
+        <span class="navbar__logo-icon">SD</span>
+        SOURADEEP DE
+      </a>
+
+      <div class="navbar__links" id="navLinks">
+        <a href="services.html" class="navbar__link navbar__link--active">Services</a>
+        <a href="#cta" class="btn btn--teal navbar__connect">Let's Connect</a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== STICKY SIDEBAR CTA ====== -->
+  <div class="sidebar-cta" aria-label="Quick contact">
+    <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="sidebar-cta__btn sidebar-cta__btn--whatsapp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.52 3.48A11.8 11.8 0 0012.04 0C5.42 0 .03 5.39.03 12c0 2.11.55 4.18 1.59 6.01L0 24l6.16-1.61A11.94 11.94 0 0012.04 24C18.65 24 24 18.61 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.04 21.8c-1.8 0-3.57-.48-5.12-1.39l-.37-.22-3.65.95.97-3.56-.24-.37A9.75 9.75 0 012.23 12c0-5.41 4.4-9.81 9.81-9.81 2.62 0 5.08 1.02 6.93 2.87A9.73 9.73 0 0121.84 12c0 5.41-4.4 9.8-9.8 9.8zm5.38-7.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.15-.2.29-.77.95-.94 1.14-.17.2-.34.22-.63.08-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.44.13-.58.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.19 0-.48.07-.73.36-.24.29-.95.93-.95 2.28 0 1.34.97 2.64 1.11 2.82.14.19 1.9 2.9 4.61 4.06.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.19-.56-.33z"/>
+      </svg>
+      <span class="sidebar-cta__label">WhatsApp</span>
+    </a>
+    <a href="mailto:souradeepde2021@gmail.com" class="sidebar-cta__btn sidebar-cta__btn--email">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16v16H4z"/>
+        <path d="M4 7l8 6 8-6"/>
+      </svg>
+      <span class="sidebar-cta__label">Email</span>
+    </a>
+  </div>
+
+  <main>
+    <!-- ====== HERO ====== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Professional Design Services
+          </div>
+          <h1 class="hero__title">Design Solutions Built for Your Brand</h1>
+          <p class="hero__subtitle">From startups to established brands. I deliver high-quality visual content that captures attention, builds consistency, and drives results across all platforms.</p>
+        </div>
+        <div class="hero__benefits">
+          <h2 class="hero__benefits-title">Why Clients Choose Me</h2>
+          <ul class="hero__benefits-list">
+            <li class="hero__benefits-item">
+              <span class="hero__benefits-checkmark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Fast Communication</span>
+            </li>
+            <li class="hero__benefits-item">
+              <span class="hero__benefits-checkmark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>100% Custom Designs</span>
+            </li>
+            <li class="hero__benefits-item">
+              <span class="hero__benefits-checkmark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>On-Time Delivery</span>
+            </li>
+            <li class="hero__benefits-item">
+              <span class="hero__benefits-checkmark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Editable Source Files</span>
+            </li>
+            <li class="hero__benefits-item">
+              <span class="hero__benefits-checkmark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Commercial Usage Rights</span>
+            </li>
+            <li class="hero__benefits-item">
+              <span class="hero__benefits-checkmark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Professional Canva Expert</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="services">
+      <div class="container">
+        <h2 class="section__title">What I Offer</h2>
+
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Brand Design</h3>
+            <p>Logo, identity, and brand guidelines to establish your visual presence.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+            <h3>Social Media Design</h3>
+            <p>Instagram posts, stories, carousels, and graphics built for engagement.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>Content Creator Design</h3>
+            <p>YouTube thumbnails, channel assets, templates for creators scaling fast.</p>
+          </div>
+        </div>
+
+        <!-- One-Time Services -->
+        <div class="addons-section">
+          <h2 class="section__title">One-Time Services</h2>
+          
+          <div class="addons-grid">
+            <div class="addon-item">
+              <span class="addon-name">Logo Design</span>
+              <span class="addon-price">From $149</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Brand Identity</span>
+              <span class="addon-price">From $299</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Instagram Post</span>
+              <span class="addon-price">From $15</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Carousel Design</span>
+              <span class="addon-price">From $45</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Story Design</span>
+              <span class="addon-price">From $12</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Flyer</span>
+              <span class="addon-price">From $35</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Poster</span>
+              <span class="addon-price">From $40</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Brochure</span>
+              <span class="addon-price">From $85</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Presentation Design</span>
+              <span class="addon-price">From $99</span>
+            </div>
+            <div class="addon-item">
+              <span class="addon-name">Canva Template Pack</span>
+              <span class="addon-price">From $99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Packages -->
+        <h2 class="section__title">Signature Packages</h2>
+        
+        <div class="packages-grid">
+          <!-- Brand Foundation -->
+          <div class="pricing-card">
+            <div class="pricing-card__header">
+              <h3>Brand Foundation</h3>
+              <span class="pricing-card__price">$399</span>
+              <p class="pricing-card__description">Perfect for businesses starting their journey.</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><span class="checkmark">✓</span> Logo Design</li>
+              <li><span class="checkmark">✓</span> Brand Color Palette</li>
+              <li><span class="checkmark">✓</span> Typography Selection</li>
+              <li><span class="checkmark">✓</span> Business Card</li>
+              <li><span class="checkmark">✓</span> Brand Guidelines</li>
+              <li><span class="checkmark">✓</span> 10 Social Media Posts</li>
+            </ul>
+            <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="width: 100%; text-align: center; margin-top: 24px;">Get Started</a>
+          </div>
+
+          <!-- Social Presence -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card__badge">Popular</div>
+            <div class="pricing-card__header">
+              <h3>Social Presence</h3>
+              <span class="pricing-card__price">$499</span>
+              <p class="pricing-card__description">For businesses that post consistently.</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><span class="checkmark">✓</span> 20 Social Media Posts</li>
+              <li><span class="checkmark">✓</span> 10 Stories</li>
+              <li><span class="checkmark">✓</span> 4 Carousel Designs</li>
+              <li><span class="checkmark">✓</span> Canva Editable Files</li>
+              <li><span class="checkmark">✓</span> Two Revision Rounds</li>
+            </ul>
+            <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="btn btn--teal" style="width: 100%; text-align: center; margin-top: 24px;">Get Started</a>
+          </div>
+
+          <!-- Creator Kit -->
+          <div class="pricing-card">
+            <div class="pricing-card__header">
+              <h3>Creator Kit</h3>
+              <span class="pricing-card__price">$349</span>
+              <p class="pricing-card__description">Designed for YouTubers and content creators.</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><span class="checkmark">✓</span> 10 YouTube Thumbnails</li>
+              <li><span class="checkmark">✓</span> Channel Banner</li>
+              <li><span class="checkmark">✓</span> Reel Covers</li>
+              <li><span class="checkmark">✓</span> Social Templates</li>
+            </ul>
+            <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="width: 100%; text-align: center; margin-top: 24px;">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Ongoing Support -->
+        <div class="ongoing-section">
+          <h2 class="section__title">Monthly Design Partnership</h2>
+          <p class="ongoing-subtitle">For businesses that need a reliable creative partner on speed dial.</p>
+          
+          <div class="ongoing-grid">
+            <div class="ongoing-card">
+              <h3>Essential</h3>
+              <span class="ongoing-card__price">$299<span>/month</span></span>
+              <ul class="ongoing-card__features">
+                <li>15 Design Requests</li>
+                <li>Priority Support</li>
+                <li>Two Revision Rounds</li>
+              </ul>
+              <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="width: 100%; text-align: center; margin-top: 20px;">Let's Talk</a>
+            </div>
+
+            <div class="ongoing-card">
+              <h3>Growth</h3>
+              <span class="ongoing-card__price">$499<span>/month</span></span>
+              <ul class="ongoing-card__features">
+                <li>30 Design Requests</li>
+                <li>Priority Delivery</li>
+                <li>Monthly Planning</li>
+                <li>Canva Source Files</li>
+              </ul>
+              <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="btn btn--teal" style="width: 100%; text-align: center; margin-top: 20px;">Let's Talk</a>
+            </div>
+
+            <div class="ongoing-card">
+              <h3>Partner</h3>
+              <span class="ongoing-card__price">$799<span>/month</span></span>
+              <ul class="ongoing-card__features">
+                <li>Unlimited Design Requests*</li>
+                <li>Priority Queue</li>
+                <li>Creative Consultation</li>
+                <li>Dedicated Support</li>
+              </ul>
+              <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="width: 100%; text-align: center; margin-top: 20px;">Let's Talk</a>
+            </div>
+          </div>
+          <p class="footnote">*One active request at a time</p>
+        </div>
+
+        <!-- Add-ons -->
+        <div class="premium-addons-section addons-section">
+          <h2 class="section__title">Premium Add-ons</h2>
+          
+          <div class="premium-addons-wrapper">
+            <div class="premium-addons-grid">
+              <div class="premium-addon-item">
+                <span class="premium-addon-name">Rush Delivery (24 Hours)</span>
+                <span class="premium-addon-price">+$49</span>
+              </div>
+              <div class="premium-addon-item">
+                <span class="premium-addon-name">Same-Day Delivery</span>
+                <span class="premium-addon-price">+$79</span>
+              </div>
+              <div class="premium-addon-item">
+                <span class="premium-addon-name">Additional Revision Round</span>
+                <span class="premium-addon-price">+$20</span>
+              </div>
+              <div class="premium-addon-item">
+                <span class="premium-addon-name">Canva Source Files</span>
+                <span class="premium-addon-price">+$30</span>
+              </div>
+              <div class="premium-addon-item">
+                <span class="premium-addon-name">Brand Guidelines PDF</span>
+                <span class="premium-addon-price">+$79</span>
+              </div>
+              <div class="premium-addon-item">
+                <span class="premium-addon-name">Presentation Design</span>
+                <span class="premium-addon-price">From $99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Process -->
+        <div class="process-section">
+          <h2 class="section__title">How It Works</h2>
+          
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="process-step__number">01</div>
+              <h3>Discovery</h3>
+              <p>Understanding your business, audience, and objectives.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">02</div>
+              <h3>Design</h3>
+              <p>Developing concepts with a focus on clarity and quality.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">03</div>
+              <h3>Refinement</h3>
+              <p>Collaborating through revisions to achieve the right outcome.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">04</div>
+              <h3>Delivery</h3>
+              <p>Providing final files ready for digital and print use.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section" id="cta">
+          <h2>Ready to Get Started?</h2>
+          <p>Let's discuss your project and find the perfect solution for your needs.</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/918961847276" target="_blank" rel="noopener noreferrer" class="btn btn--teal">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.52 3.48A11.8 11.8 0 0012.04 0C5.42 0 .03 5.39.03 12c0 2.11.55 4.18 1.59 6.01L0 24l6.16-1.61A11.94 11.94 0 0012.04 24C18.65 24 24 18.61 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.04 21.8c-1.8 0-3.57-.48-5.12-1.39l-.37-.22-3.65.95.97-3.56-.24-.37A9.75 9.75 0 012.23 12c0-5.41 4.4-9.81 9.81-9.81 2.62 0 5.08 1.02 6.93 2.87A9.73 9.73 0 0121.84 12c0 5.41-4.4 9.8-9.8 9.8zm5.38-7.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.15-.2.29-.77.95-.94 1.14-.17.2-.34.22-.63.08-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.44.13-.58.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.19 0-.48.07-.73.36-.24.29-.95.93-.95 2.28 0 1.34.97 2.64 1.11 2.82.14.19 1.9 2.9 4.61 4.06.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.19-.56-.33z"/>
+              </svg>
+              WhatsApp Me
+            </a>
+            <a href="mailto:souradeepde2021@gmail.com" class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16v16H4z"/>
+                <path d="M4 7l8 6 8-6"/>
+              </svg>
+              Send Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Who I Work With Section -->
+        <div class="who-i-work-section">
+          <h2 class="section__title">Who I Work With</h2>
+          <div class="who-i-work-grid">
+            <div class="work-with-card">
+              <h3>Startups</h3>
+            </div>
+            <div class="work-with-card">
+              <h3>Small Businesses</h3>
+            </div>
+            <div class="work-with-card">
+              <h3>Coaches</h3>
+            </div>
+            <div class="work-with-card">
+              <h3>Content Creators</h3>
+            </div>
+            <div class="work-with-card">
+              <h3>Agencies</h3>
+            </div>
+            <div class="work-with-card">
+              <h3>E-commerce Brands</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+          <h2 class="section__title">Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">How many revisions are included?</span>
+                <div class="faq-toggle">▼</div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">Each package includes up to two rounds of revisions. This gives you the opportunity to request changes and fine-tune designs to match your vision. Additional revision rounds can be added as a premium add-on for $20 per round.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">What file formats will I receive?</span>
+                <div class="faq-toggle">▼</div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">By default, all designs are delivered as Canva files for easy editing. PNG with high-resolution versions and PDF formats are included for immediate use.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">Do you work with international clients?</span>
+                <div class="faq-toggle">▼</div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">Absolutely! I work with clients from around the world. Time zone differences are not an issue—communication is handled through email, WhatsApp, and Canva collaboration tools. I'm happy to accommodate different schedules and currencies for all international projects.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">How long does a project take?</span>
+                <div class="faq-toggle">▼</div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">Standard turnaround time is 5-7 business days. Rush delivery (24 hours) and same-day delivery options are available as premium add-ons if you need faster results. Exact timelines depend on project complexity and current workload.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__name">SOURADEEP DE</span>
+      <span class="footer__copy">© <span id="current-year"></span></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-active');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.classList.remove('is-active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // FAQ Accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
